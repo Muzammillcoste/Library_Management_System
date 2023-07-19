@@ -214,7 +214,7 @@ def view_all_members() -> tuple:
     '''
 
     try:
-        view_mem = '''SELECT * FROM MEMBERS'''
+        view_mem = '''SELECT * FROM MEMBERS ORDER BY member_id'''
         all_mem = cur.execute(view_mem)
         result = all_mem.fetchall()
         # for member in result:
@@ -538,7 +538,7 @@ def view_all_book() -> tuple:
     '''
 
     try:
-        view_mem = '''SELECT * FROM BOOKS'''
+        view_mem = '''SELECT * FROM BOOKS ORDER BY book_id'''
         all_mem = cur.execute(view_mem)
         result = all_mem.fetchall()
         # for book in result:
